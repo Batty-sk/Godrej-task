@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saurav kumar - Web Developer</title>
+    <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Saurav kumar</div>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about">
+            <h1>About Me</h1>
+            <p>Hi, I'm Saurav kumar, a passionate web developer with a keen eye for design and a love for clean, efficient code. With 2 years of experience in front-end and back-end development, I specialize in creating responsive and user-friendly websites.</p>
+        </section>
+
+        <section id="projects">
+            <h2>My Projects</h2>
+            <div class="project-grid">
+                <div class="project-card" data-project="1">
+                    <img src="https://img.icons8.com/plasticine/100/e-commerce.png" alt="e-commerce" style="height: 50px; width: 50px; min-height: 50px; min-width: 50px;"/>
+                                        <h3>E-commerce Website</h3>
+                    <p>A fully responsive online store built with React and Node.js.</p>
+                </div>
+                <div class="project-card" data-project="2">
+                    <img src="https://img.icons8.com/cotton/64/nft.png" alt="nft" style="height: 50px; width: 50px; min-height: 50px; min-width: 50px;"/>
+                                     <h3>NFT MarketPlace</h3>
+                    <p>A sleek NftMarketplace application using React and solidity.</p>
+                </div>
+                <div class="project-card" data-project="3">
+                    <img  src="https://img.icons8.com/plasticine/100/task.png" alt="task" style="height: 50px; width: 50px; min-height: 50px; min-width: 50px;"/>
+                    <h3>Task Manager</h3>
+                    <p>A full-stack task management system with user authentication.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <form id="contact-form">
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Saurav kumar. All rights reserved.</p>
+    </footer>
+
+    <div id="project-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modal-title"></h2>
+            <img id="modal-image" src="" alt="">
+            <p id="modal-description"></p>
+        </div>
+    </div>
+
+    <script src="portfolio.js"></script>
+</body>
+</html>

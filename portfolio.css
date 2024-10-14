@@ -1,0 +1,169 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 1rem;
+}
+nav ul li::after{
+    content: "";
+    display: block;
+    width: 0%;
+    height: 2px;
+    background-color: white;
+    transition: width 300ms;
+}
+nav ul li:hover::after{
+    width: 100%;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+h1, h2 {
+    margin-bottom: 1rem;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+}
+
+.project-card {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input, textarea {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    background-color: goldenrod;
+    display: inline-block;
+    width: fit-content;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color:whitesmoke;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid gray;
+    width: 70%;
+    max-width: 600px;
+}
+
+.close {
+    color: gray;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {   /* for making the website responsive. */
+    nav {
+        flex-direction: column;
+    }
+
+    nav ul {
+        margin-top: 1rem;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+}
